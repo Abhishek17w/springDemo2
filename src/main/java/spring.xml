@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+	<bean id="alien" class="com.abhishek.SpringDemo.Alien" scope="prototype" autowire="byType">
+		<constructor-arg value="12"></constructor-arg>	<!-- constructor injection -->
+	<!--	<property name="age" value="10"></property>  setter injection -->
+	<!--	<property name="com" ref="desktop"></property> 	ref attribute-->
+	</bean>
+	   
+	 <bean id="com" class="com.abhishek.SpringDemo.Laptop" >
+	</bean>
+	
+	<!-- <bean id="laptop" class="com.abhishek.SpringDemo.Laptop" >
+	</bean>	 -->
+	
+	<bean id="desktop" class="com.abhishek.SpringDemo.Desktop" primary="true">
+	</bean>
+</beans>
